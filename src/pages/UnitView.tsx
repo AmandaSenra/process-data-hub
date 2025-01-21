@@ -5,15 +5,29 @@ import { Plus } from "lucide-react";
 
 const processes = [
   {
+    id: "1",
     title: "Processo de Matrícula",
     description: "Fluxo completo do processo de matrícula de alunos",
     type: "process" as const,
   },
   {
+    id: "2",
     title: "Documentação de Rematrícula",
     description: "Documentação detalhada do processo de rematrícula",
     type: "documentation" as const,
   },
+  {
+    id: "3",
+    title: "Processo de Transferência",
+    description: "Fluxo para transferência entre unidades ou cursos",
+    type: "process" as const,
+  },
+  {
+    id: "4",
+    title: "Manual do Professor",
+    description: "Documentação completa dos processos acadêmicos para professores",
+    type: "documentation" as const,
+  }
 ];
 
 export default function UnitView() {
@@ -31,7 +45,7 @@ export default function UnitView() {
       </div>
       <div className="card-grid">
         {processes.map((process) => (
-          <ProcessCard key={process.title} {...process} />
+          <ProcessCard key={process.id} {...process} />
         ))}
       </div>
     </div>

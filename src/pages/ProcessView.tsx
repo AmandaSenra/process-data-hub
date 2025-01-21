@@ -6,9 +6,29 @@ import { Edit } from "lucide-react";
 const processData = {
   title: "Processo de Matrícula",
   description: "Fluxo completo do processo de matrícula de alunos",
-  content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  content: `O processo de matrícula é composto por várias etapas importantes que devem ser seguidas criteriosamente:
+
+1. Verificação de documentos
+   - RG e CPF do aluno
+   - Histórico escolar
+   - Comprovante de residência
+
+2. Análise acadêmica
+   - Validação do histórico escolar
+   - Verificação de pré-requisitos
+   - Análise de equivalência de disciplinas
+
+3. Processamento financeiro
+   - Verificação de pagamentos anteriores
+   - Geração de boletos
+   - Confirmação de pagamento
+
+4. Confirmação da matrícula
+   - Geração do número de matrícula
+   - Envio de confirmação por email
+   - Liberação de acesso ao portal do aluno`,
   type: "process" as const,
-  image: null
+  image: "/placeholder.svg"
 };
 
 export default function ProcessView() {
@@ -16,7 +36,7 @@ export default function ProcessView() {
   const { processId } = useParams();
 
   const handleEdit = () => {
-    navigate(`edit`); // This will navigate to the edit form
+    navigate(`edit`);
   };
 
   return (
@@ -37,18 +57,18 @@ export default function ProcessView() {
         
         <div>
           <h2 className="text-xl font-semibold mb-2">Conteúdo</h2>
-          <div className="prose max-w-none">
+          <div className="prose max-w-none whitespace-pre-line">
             {processData.content}
           </div>
         </div>
         
         {processData.image && (
           <div>
-            <h2 className="text-xl font-semibold mb-2">Imagem</h2>
+            <h2 className="text-xl font-semibold mb-2">Imagem do Processo</h2>
             <img 
               src={processData.image} 
               alt="Process documentation" 
-              className="rounded-lg max-h-96 object-contain"
+              className="rounded-lg max-h-96 object-contain border border-border"
             />
           </div>
         )}
