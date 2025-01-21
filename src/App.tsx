@@ -7,6 +7,7 @@ import { MainLayout } from "./components/MainLayout";
 import GroupView from "./pages/GroupView";
 import StateView from "./pages/StateView";
 import UnitView from "./pages/UnitView";
+import ProcessView from "./pages/ProcessView";
 import { ProcessForm } from "./components/ProcessForm";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,7 @@ const App = () => (
             <Route path="/group/:groupId" element={<GroupView />} />
             <Route path="/group/:groupId/state/:state" element={<StateView />} />
             <Route path="/group/:groupId/state/:state/unit/:unit" element={<UnitView />} />
+            <Route path="/group/:groupId/state/:state/unit/:unit/process/:processId" element={<ProcessView />} />
             <Route path="/group/:groupId/state/:state/unit/:unit/new" element={<ProcessForm />} />
           </Routes>
         </MainLayout>
