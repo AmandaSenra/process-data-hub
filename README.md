@@ -1,7 +1,5 @@
 # Bem vindo ao projeto de documentação de processos DATA-HUB
 
-# DATA-HUB
-
 ## 📌 Objetivo
 Padronizar documentações de processos e projetos criados e executados pela equipe de TI em suporte de uma grande marca.
 
