@@ -152,27 +152,27 @@ const unitsData = {
 const processes = [
   {
     id: "1",
-    title: "Processo de Matrícula",
-    description: "Fluxo completo do processo de matrícula de alunos",
-    type: "process" as const,
+    title: "Biometria - CPD",
+    description: "Fluxo completo do processo para cadastro de biometria em CPD.",
+    type: "documentation" as const,
   },
   {
     id: "2",
-    title: "Documentação de Rematrícula",
-    description: "Documentação detalhada do processo de rematrícula",
-    type: "documentation" as const,
-  },
-  {
-    id: "3",
-    title: "Processo de Transferência",
-    description: "Fluxo para transferência entre unidades ou cursos",
+    title: "Vlans",
+    description: "Descrição de todas as Vlans da unidade.",
     type: "process" as const,
   },
   {
-    id: "4",
-    title: "Manual do Professor",
-    description: "Documentação completa dos processos acadêmicos para professores",
+    id: "3",
+    title: "O que é um Tier2 ?",
+    description: "Documentação do que é Tier2, como funciona e para que serve.",
     type: "documentation" as const,
+  },
+  {
+    id: "4",
+    title: "IP de impressão",
+    description: "Fluxo completo de todos os IP's de impressão por setor.",
+    type: "process" as const,
   }
 ];
 
