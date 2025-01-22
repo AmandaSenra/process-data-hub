@@ -1,69 +1,52 @@
-# Welcome to your Lovable project
+# Bem vindo ao projeto de documentação de processos DATA-HUB
 
-## Project info
+# DATA-HUB
 
-**URL**: https://lovable.dev/projects/7736a62f-a86e-4f59-9877-6f8504a53856
+## 📌 Objetivo
+Padronizar documentações de processos e projetos criados e executados pela equipe de TI em suporte de uma grande marca.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Stacks Utilizadas
+- **TypeScript**
+- **Node.js**
 
-**Use Lovable**
+### 🛠️ Ferramentas Adicionais
+- **IA - Cursor**
+- **Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7736a62f-a86e-4f59-9877-6f8504a53856) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📋 Pré-requisitos
+Antes de começar, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
+- [Node.js](https://nodejs.org)
+- [npm](https://www.npmjs.com/)
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ⚡ Como Utilizar
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Siga as instruções abaixo para configurar e executar o projeto:
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+### Passo 1: Clone o repositório do GitHub
+```bash
 git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
+```
+### Passo 2: Navegue até o diretório do projeto
+```bash
 cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```
+### Passo 3: Instale as dependências necessárias
+```bash
+npm install
+```
+### Passo 4: Inicie o projeto para visualizar o preview instantâneo na web
+```bash
 npm run dev
 ```
+## 📝 Contribuições
 
-**Edit a file directly in GitHub**
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorias no projeto.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/7736a62f-a86e-4f59-9877-6f8504a53856) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)

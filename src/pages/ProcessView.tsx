@@ -28,7 +28,7 @@ const processData = {
    - Salve o número de biometria do usuário e os dados pessoais do usuário`,
 
   type: "process" as const,
-  image: "/placeholder.svg"
+  image: "/biometria.jpeg"
 };
 
 export default function ProcessView() {

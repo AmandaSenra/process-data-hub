@@ -38,18 +38,27 @@ export function ProcessForm() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     
+    // Convert image to base64 if it exists
+    let imageBase64 = null;
+    if (formData.image) {
+      const reader = new FileReader();
+      imageBase64 = await new Promise((resolve) => {
+        reader.onload = () => resolve(reader.result);
+        reader.readAsDataURL(formData.image);
+      });
+    }
+
     // Create new process/documentation object
     const newProcess = {
-      id: Date.now().toString(), // Generate unique ID
+      id: Date.now().toString(),
       title: formData.title,
       description: formData.description,
       content: formData.content,
       type,
-      image: formData.image ? URL.createObjectURL(formData.image) : null
+      image: imageBase64
     };
 
-    // In a real app, you would send this to an API
-    // For now, we'll store it in localStorage
+    // Save to localStorage
     const existingProcesses = JSON.parse(localStorage.getItem('processes') || '[]');
     const updatedProcesses = [...existingProcesses, newProcess];
     localStorage.setItem('processes', JSON.stringify(updatedProcesses));
@@ -59,7 +68,8 @@ export function ProcessForm() {
       description: "Processo criado com sucesso.",
     });
     
-    navigate(-1);
+    // Navigate to the new process view
+    navigate(`/process/${newProcess.id}`);
   };
 
   return (
@@ -87,27 +97,39 @@ export function ProcessForm() {
       </div>
 
       <div className="space-y-2">
-      <Label htmlFor="content" className="text-white">Texto</Label>
-      <Textarea id="content" className="min-h-[200px] text-white" required />
+        <Label htmlFor="content" className="text-white">Texto</Label>
+        <Textarea 
+          id="content" 
+          className="min-h-[200px] text-white" 
+          required
+          value={formData.content}
+          onChange={handleInputChange}
+        />
       </div>
 
       <div className="space-y-2">
-      <Label className="text-white">Tipo</Label>
-      <RadioGroup defaultValue={type} onValueChange={(v) => setType(v as "process" | "documentation")}>
-        <div className="flex items-center space-x-2">
-        <RadioGroupItem value="process" id="process" />
-        <Label htmlFor="process" className="text-white">Dados de Processo</Label>
-        </div>
-        <div className="flex items-center space-x-2">
-        <RadioGroupItem value="documentation" id="documentation" />
-        <Label htmlFor="documentation" className="text-white">Documentação de Processo</Label>
-        </div>
-      </RadioGroup>
+        <Label className="text-white">Tipo</Label>
+        <RadioGroup defaultValue={type} onValueChange={(v) => setType(v as "process" | "documentation")}>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="process" id="process" />
+            <Label htmlFor="process" className="text-white">Dados de Processo</Label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="documentation" id="documentation" />
+            <Label htmlFor="documentation" className="text-white">Documentação de Processo</Label>
+          </div>
+        </RadioGroup>
       </div>
 
       <div className="space-y-2">
-      <Label htmlFor="image" className="text-white">Imagem</Label>
-      <Input id="image" type="file" accept="image/*" className="text-black" />
+        <Label htmlFor="image" className="text-white">Imagem</Label>
+        <Input 
+          id="image" 
+          type="file" 
+          accept="image/*" 
+          className="text-black"
+          onChange={handleFileChange}
+        />
       </div>
 
       <Button type="submit" className="w-full">Criar</Button>
