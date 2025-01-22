@@ -49,16 +49,16 @@ export default function ProcessView() {
         </Button>
       </div>
       
-      <div className="bg-card rounded-lg border p-6 space-y-6">
+        <div className="bg-card rounded-lg border p-6 space-y-6">
         <div>
-          <h2 className="text-xl font-semibold mb-2">Descrição</h2>
-          <p className="text-muted-foreground">{processData.description}</p>
+          <h2 className="text-xl font-semibold mb-2 text-black">Descrição</h2>
+          <p className="text-black">{processData.description}</p>
         </div>
         
         <div>
-          <h2 className="text-xl font-semibold mb-2">Conteúdo</h2>
-          <div className="prose max-w-none whitespace-pre-line">
-            {processData.content}
+          <h2 className="text-xl font-semibold mb-2 text-black">Conteúdo</h2>
+          <div className="prose max-w-none whitespace-pre-line text-black">
+          {processData.content}
           </div>
         </div>
         

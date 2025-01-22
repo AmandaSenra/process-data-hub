@@ -17,21 +17,21 @@ export function ProcessCard({ title, description, type, id = "1" }: ProcessCardP
 
   return (
     <div 
-      className="process-card cursor-pointer hover:shadow-md transition-shadow"
+      className="process-card cursor-pointer hover:shadow-md transition-shadow text-black"
       onClick={handleClick}
     >
       <div className="flex items-center justify-between mb-2">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <span className={`tag ${type === "process" ? "tag-process" : "tag-documentation"}`}>
-          {type === "process" ? (
-            <Database className="h-3 w-3 mr-1" />
-          ) : (
-            <FileText className="h-3 w-3 mr-1" />
-          )}
-          {type === "process" ? "Processo" : "Documentação"}
-        </span>
+      <h3 className="text-lg font-semibold text-black">{title}</h3>
+      <span className={`tag ${type === "process" ? "tag-process" : "tag-documentation"} text-black`}>
+        {type === "process" ? (
+        <Database className="h-3 w-3 mr-1" />
+        ) : (
+        <FileText className="h-3 w-3 mr-1" />
+        )}
+        {type === "process" ? "Processo" : "Documentação"}
+      </span>
       </div>
-      <p className="text-sm text-muted-foreground">{description}</p>
+      <p className="text-sm text-black">{description}</p>
     </div>
   );
 }
