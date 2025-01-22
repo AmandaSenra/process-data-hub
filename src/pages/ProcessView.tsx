@@ -4,29 +4,29 @@ import { Edit } from "lucide-react";
 
 // Mock data - in a real app this would come from an API
 const processData = {
-  title: "Processo de Matrícula",
-  description: "Fluxo completo do processo de matrícula de alunos",
-  content: `O processo de matrícula é composto por várias etapas importantes que devem ser seguidas criteriosamente:
+  title: "Cadastro de biometria - CPD",
+  description: "Passo a passo para cadastrar a biometria de usuários autorizados no CPD",
+  content: `O processo para cadastrar a biometria de usuários autorizados no CPD é composto por algumas etapas importantes que devem ser seguidas criteriosamente:
 
-1. Verificação de documentos
-   - RG e CPF do aluno
-   - Histórico escolar
-   - Comprovante de residência
+1. Verificação de usuário:
+   - Verificar se o usuário está autorizado a cadastrar a biometria
+   - Verificar motivo de acesso do usuário no CPD
 
-2. Análise acadêmica
-   - Validação do histórico escolar
-   - Verificação de pré-requisitos
-   - Análise de equivalência de disciplinas
+2. Na tela de cadastro de biometria, siga os seguintes passos:
+   - Pressionar o botão menu até aparecer a tela de cadastro
+   - Inserir senha de admin do CPD. (123456)
+   - Clicar em Cadastrar usuário
+   - Clicar em Cadastrar biometria
+   - Verificar e anotar o número da biometria do usuário
+   - Pedir para que o usuário insira sua biometria no dispositivo (3 vezes solicitado)
+   - Clicar em Confirmar
+   - Clicar em Sair
 
-3. Processamento financeiro
-   - Verificação de pagamentos anteriores
-   - Geração de boletos
-   - Confirmação de pagamento
+ 3. Cadastro em Planilha de controle de acesso ao CPD:
+   - Ao terminar o cadastro, acesse a planilha de controle de acessos ao CPD
+   - Planilha: https://docs.google.com/spreadsheets/d/1U3ELtspWe_fzxnAErehRZ6_-TFW1QSExYhj9cpB9aXg/edit?usp=sharing
+   - Salve o número de biometria do usuário e os dados pessoais do usuário`,
 
-4. Confirmação da matrícula
-   - Geração do número de matrícula
-   - Envio de confirmação por email
-   - Liberação de acesso ao portal do aluno`,
   type: "process" as const,
   image: "/placeholder.svg"
 };
