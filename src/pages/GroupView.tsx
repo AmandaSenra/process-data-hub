@@ -3,12 +3,10 @@ import { Button } from "@/components/ui/button";
 import { StateCard } from "@/components/StateCard";
 
 const states = [
-  "São Paulo",
   "Rio de Janeiro",
-  "Minas Gerais",
-  "Bahia",
-  "Ceará",
-  "Pernambuco"
+  "São Paulo",
+  "Belo Horizonte",
+  "Brasília"
 ];
 
 export default function GroupView() {
@@ -18,17 +16,23 @@ export default function GroupView() {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-6">
-        {groupId === "ibmec" && "Ibmec"}
-        {groupId === "estacio" && "Estácio"}
-        {groupId === "idomed" && "IDomed"}
+        <button 
+          onClick={() => navigate(-1)} 
+          className="text-2xl font-bold hover:text-blue-800"
+        >
+          {groupId === "ibmec" && "Ibmec"}
+          {groupId === "estacio" && "Estácio"}
+          {groupId === "idomed" && "IDomed"}
+        </button>
       </h1>
       <div className="card-grid">
         {states.map((state) => (
-          <StateCard
-            key={state}
-            name={state}
-            onClick={() => navigate(`/group/${groupId}/state/${state}`)}
-          />
+          <div key={state} className="text-black">
+            <StateCard
+              name={state}
+              onClick={() => navigate(`/group/${groupId}/state/${state}`)}
+            />
+          </div>
         ))}
       </div>
     </div>

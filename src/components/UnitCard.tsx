@@ -3,16 +3,20 @@ import { Building } from "lucide-react";
 interface UnitCardProps {
   name: string;
   onClick: () => void;
+  className?: string;
 }
 
-export function UnitCard({ name, onClick }: UnitCardProps) {
+export function UnitCard({ name, onClick, className }: UnitCardProps) {
   return (
-    <div className="process-card cursor-pointer" onClick={onClick}>
+    <div 
+      className={`p-4 bg-white rounded-lg shadow cursor-pointer ${className || ''}`}
+      onClick={onClick}
+    >
       <div className="flex items-center gap-2 mb-2">
         <Building className="h-5 w-5 text-primary" />
-        <h3 className="text-lg font-semibold">{name}</h3>
+        <h3 className="text-lg font-semibold text-black">{name}</h3>
       </div>
-      <p className="text-sm text-muted-foreground">Clique para ver os processos</p>
+      <p className="text-sm text-black">Clique para ver os processos</p>
     </div>
   );
 }
