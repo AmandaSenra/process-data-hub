@@ -11,7 +11,7 @@ Padronizar documentações de processos e projetos criados e executados pela equ
 
 ### 🛠️ Ferramentas Adicionais
 - **IA - Cursor**
-- **Lovable**
+- **IA - Lovable**
 
 ---
 
